@@ -1,1 +1,16 @@
-<he-city></he-city>
+<div class="row">
+  <div class="col-xs-12"><button class="btn btn-success">New City</button></div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <a *ngFor="let city of cities" href="#" class="list-group-item clearfix">
+      <div class="pull-left">
+        <h2 class="list-group-item-heading">{{city.name}} </h2>
+        <p class="list-group-item-text"> {{city.description}} </p>
+      </div>
+      <span class="pull-right"><img [src]="city.imageURL" alt="{{city.name}}" srcset="" class="image-responsive" style="max-height: 50px;" ></span>
+    </a>
+    <he-city></he-city>
+  </div>
+</div>
