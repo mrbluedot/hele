@@ -1,5 +1,7 @@
 <div class="row">
   <ul class="list-group">
-    <a class="list-group-item" style="cursor: pointer;"></a>
+    <a class="list-group-item" style="cursor: pointer;" *ngFor="let activity of activities">
+    {{activity.name}} - ${{activity.cost}}
+  </a>
   </ul>
 </div>

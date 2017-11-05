@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Activity } from '../activity/activity.model';
 
 @Component({
   selector: 'he-activity-list',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityListComponent implements OnInit {
 
-  activities = [];
+  activities: Activity[] = [
+    new Activity('See Space Needle', 30),
+    new Activity('Visit Aquarium', 20),
+  ];
+
   constructor() { }
 
   ngOnInit() {
