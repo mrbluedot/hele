@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <he-activity-list-edit></he-activity-list-edit>
+    <he-activity-list-edit (activityAdded)="onActivityAdded($event)"></he-activity-list-edit>
   </div>
 </div>
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <he-activity-list></he-activity-list>
+    <he-activity-list [newActivity]="newActivity"></he-activity-list>
   </div>
 </div>

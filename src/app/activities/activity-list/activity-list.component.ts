@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Activity } from '../activity/activity.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Activity } from '../activity/activity.model';
   styleUrls: ['./activity-list.component.scss']
 })
 export class ActivityListComponent implements OnInit {
+
+  @Input() newActivity: Activity;
 
   activities: Activity[] = [
     new Activity('See Space Needle', 30),

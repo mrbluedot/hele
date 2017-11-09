@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Activity } from './activity/activity.model';
 
 @Component({
   selector: 'he-activities',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activities.component.scss']
 })
 export class ActivitiesComponent implements OnInit {
+  newActivity: Activity;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onActivityAdded(activity: Activity) {
+    this.newActivity = activity;
+  }
 }
